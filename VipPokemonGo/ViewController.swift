@@ -13,12 +13,15 @@ class ViewController: UIViewController , CLLocationManagerDelegate {
     
     
     @IBOutlet weak var mapView: MKMapView!
+    var pokemons : [Pokemon] = []
     var manager = CLLocationManager()
     var updateCount = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        pokemons = allPokemon()
         
         manager.delegate = self
         
@@ -53,6 +56,8 @@ class ViewController: UIViewController , CLLocationManagerDelegate {
             mapView.setRegion(region, animated: false)
             
             updateCount += 1
+        } else {
+            manager.stopUpdatingLocation()
         }
         
     }

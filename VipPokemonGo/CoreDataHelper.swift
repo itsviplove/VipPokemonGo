@@ -14,7 +14,10 @@ func addPokemon() {
     createPokemon(name: "Meowth", imageName: "meowth")
     createPokemon(name: "Mew", imageName: "mew")
     createPokemon(name: "Zubat", imageName: "zubat")
+    createPokemon(name: "Ratata", imageName: "rattata")
     
+    
+    (UIApplication.shared.delegate as! AppDelegate).saveContext()
     
 }
 
@@ -26,6 +29,8 @@ func createPokemon(name: String, imageName : String) {
     pokemons.name = name
     pokemons.imageName = imageName
     
+    
+    
 }
 
 func allPokemon() -> [Pokemon] {
@@ -33,7 +38,7 @@ func allPokemon() -> [Pokemon] {
     
     do {
      let pokemons = try context.fetch(Pokemon.fetchRequest()) as! [Pokemon]
-        addPokemon()
+        
         if pokemons.count == 0 {
             addPokemon()
             return allPokemon()
@@ -50,7 +55,7 @@ func caughtPokemons() -> [Pokemon] {
     
     
         let fetchRequest = Pokemon.fetchRequest() as NSFetchRequest<Pokemon>
-            fetchRequest.predicate = NSPredicate(format: "caught == %@", true as! CVarArg)
+            fetchRequest.predicate = NSPredicate(format: "caught == %@", true as CVarArg)
         
     
     do {
@@ -74,7 +79,7 @@ func uncaughtPokemons() -> [Pokemon] {
     
     
     let fetchRequest = Pokemon.fetchRequest() as NSFetchRequest<Pokemon>
-    fetchRequest.predicate = NSPredicate(format: "caught == %@",false as! CVarArg)
+    fetchRequest.predicate = NSPredicate(format: "caught == %@",false as CVarArg)
     
     
     do {

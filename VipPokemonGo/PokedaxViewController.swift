@@ -16,6 +16,7 @@ class PokedaxViewController: UIViewController , UITableViewDelegate , UITableVie
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         caughtPokemon = caughtPokemons()
         uncaughtPokemon = uncaughtPokemons()
         
@@ -24,15 +25,37 @@ class PokedaxViewController: UIViewController , UITableViewDelegate , UITableVie
 
         // Do any additional setup after loading the view.
     }
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 2
+    }
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        if section == 0 {
+            return "Caught"
+        } else {
+            return "UnCaught"
+        }
+        
+    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if section == 0 {
+            return caughtPokemon.count
+        } else {
+        
         return uncaughtPokemon.count
+        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell()
-        let pokemon = uncaughtPokemon[indexPath.row]
+        let pokemon : Pokemon
+        if indexPath.section == 0 {
+            pokemon = caughtPokemon[indexPath.row]
+        } else {
+            pokemon = uncaughtPokemon[indexPath.row]
+        }
         cell.textLabel?.text = pokemon.name
+        cell.imageView?.image = UIImage(named: pokemon.imageName!)
         return cell
     }
     

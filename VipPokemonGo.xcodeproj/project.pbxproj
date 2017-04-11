@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		374256701E9CDDFC008B3FAA /* PokeAnno.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3742566F1E9CDDFC008B3FAA /* PokeAnno.swift */; };
 		3B18B4191E79346A006BE5EC /* PokedaxViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B18B4181E79346A006BE5EC /* PokedaxViewController.swift */; };
 		3B18B41B1E7935F1006BE5EC /* CoreDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B18B41A1E7935F1006BE5EC /* CoreDataHelper.swift */; };
 		3B4AD70A1E785CD700E3D540 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B4AD7091E785CD700E3D540 /* AppDelegate.swift */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3742566F1E9CDDFC008B3FAA /* PokeAnno.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PokeAnno.swift; sourceTree = "<group>"; };
 		3B18B4181E79346A006BE5EC /* PokedaxViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PokedaxViewController.swift; sourceTree = "<group>"; };
 		3B18B41A1E7935F1006BE5EC /* CoreDataHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataHelper.swift; sourceTree = "<group>"; };
 		3B4AD7061E785CD700E3D540 /* VipPokemonGo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VipPokemonGo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -69,6 +71,7 @@
 				3B18B4181E79346A006BE5EC /* PokedaxViewController.swift */,
 				3B4AD70D1E785CD700E3D540 /* Main.storyboard */,
 				3B18B41A1E7935F1006BE5EC /* CoreDataHelper.swift */,
+				3742566F1E9CDDFC008B3FAA /* PokeAnno.swift */,
 				3B4AD7131E785CD700E3D540 /* Assets.xcassets */,
 				3B4AD7151E785CD700E3D540 /* LaunchScreen.storyboard */,
 				3B4AD7181E785CD700E3D540 /* Info.plist */,
@@ -157,6 +160,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				374256701E9CDDFC008B3FAA /* PokeAnno.swift in Sources */,
 				3B18B41B1E7935F1006BE5EC /* CoreDataHelper.swift in Sources */,
 				3B4AD70C1E785CD700E3D540 /* ViewController.swift in Sources */,
 				3B18B4191E79346A006BE5EC /* PokedaxViewController.swift in Sources */,
